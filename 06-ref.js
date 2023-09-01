@@ -32,7 +32,7 @@ function trigger(target, key) {
     })
   }
 }
-
+// в самом vuex все лежит в reactive
 function reactive(target) {
   const handler = {
     get(target, key, receiver) {
