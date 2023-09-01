@@ -69,7 +69,7 @@ function ref(raw) {
 // function ref(intialValue) {
 //   return reactive({ value: initialValue })
 // }
-
+// функция которая запускает реактивность - аналог есть в ядре и она используется в тестах
 function effect(eff) {
   activeEffect = eff
   activeEffect()
