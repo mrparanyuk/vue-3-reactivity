@@ -73,6 +73,7 @@ function effect(eff) {
 }
 
 function computed(getter) {
+  // да, computed работает на ref и тут нет того самого Proxy объекта
   let result = ref()
 
   effect(() => (result.value = getter()))
