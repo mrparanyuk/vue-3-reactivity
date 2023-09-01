@@ -1,3 +1,5 @@
+// Map позволяет вызывать эффекты внутри депов в порядке их добавления. Например это дает что реактивность начинать "течь" всегда от самого верхнеуровнего компонента
+// Плюс важная фишка в WeakMap в том что реактивность для удаленных компонентов будет удалятся. Этому способствует weak связь. 
 const targetMap = new WeakMap() // targetMap stores the effects that each object should re-run when it's updated
 function track(target, key) {
   // We need to make sure this effect is being tracked.
