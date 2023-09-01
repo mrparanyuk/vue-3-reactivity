@@ -16,6 +16,8 @@ function track(target, key) {
       depsMap.set(key, (dep = new Set())) // Create a new Set
     }
     dep.add(activeEffect) // Add effect to dependency map
+    // Именно такие фокусы дают нечитаемые консольлоги когда работаем с vuex-orm. Наличие уровней entities, connection, data, <имя_модели> дает страшную комбинаторику.
+    // Ну и вообще по-другому просто не будет функционировать схема)
   }
 }
 
