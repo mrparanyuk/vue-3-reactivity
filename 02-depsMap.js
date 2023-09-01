@@ -1,4 +1,11 @@
 const depsMap = new Map()
+// key это тип операции в ядре вью
+export const enum TrackOpTypes {
+  GET = 'get',
+  HAS = 'has',
+  ITERATE = 'iterate'
+}
+
 function track(key) {
   // Make sure this effect is being tracked.
   let dep = depsMap.get(key)
